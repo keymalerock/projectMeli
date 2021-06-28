@@ -1,0 +1,68 @@
+$bg: #FFF;
+$bs: #282c34;
+$bb: #fafafa;
+.boxmain {
+  background-color: $bg;
+  box-shadow: $bs;
+  //border: 1px solid $bb;
+  padding: 0 1rem;
+  margin: 5rem;
+  display: flex;
+
+}
+.icoNew{
+  width: 24px;
+  height: 24px;
+}
+.floatimg{
+  float: left;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  //display: flex;
+  //flex-direction: row;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.listado{
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  width: 100%;
+  .unite{
+    width: 100%;
+    height: 12rem;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #bdcace;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+  }
+  .shortDescription{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.item-title{
+  color: #333;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .item-title-bold{
+    font-weight: bolder;
+  }
+}
+.downCol{
+  width: 50rem;
+}
+.downCol-right{
+  position: relative;
+  float: right;
+  padding-left: 4rem;
+  text-align: right;
+  width: 20rem;
+}
