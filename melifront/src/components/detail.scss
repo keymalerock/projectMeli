@@ -4,11 +4,18 @@ $bb: #fafafa;
 .boxmain {
   background-color: $bg;
   box-shadow: $bs;
-  //border: 1px solid $bb;
   padding: 0 1rem;
   margin: 5rem;
   display: flex;
 
+}
+.boxmain-detalle {
+  background-color: $bg;
+  box-shadow: $bs;
+  padding: 0 1rem;
+  margin: 5rem;
+  display: flex;
+  flex-direction: row;
 }
 .icoNew{
   width: 24px;
@@ -23,6 +30,13 @@ $bb: #fafafa;
   //flex-direction: row;
   padding-left: 30px;
   padding-right: 30px;
+}
+.floatimgBbig{
+  width: 450px;
+  height: 450px;
+  align-content: center;
+  text-align: center;
+  display: inline;
 }
 .listado{
   display: flex;
@@ -44,6 +58,13 @@ $bb: #fafafa;
     display: flex;
     flex-direction: column;
   }
+  .unite-detalle{
+    height: 30rem;
+  }
+  .low {
+    flex-direction: row;
+    align-self: center;
+  }
 }
 .item-title{
   color: #333;
@@ -52,6 +73,7 @@ $bb: #fafafa;
   line-height: 1.3;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: justify;
   .item-title-bold{
     font-weight: bolder;
   }
@@ -65,4 +87,34 @@ $bb: #fafafa;
   padding-left: 4rem;
   text-align: right;
   width: 20rem;
+}
+.andes-button{
+  border-color: transparent;
+  background-color: #3483fa;
+  color: #fff;
+  border-radius: 6px;
+  height: 48px;
+  letter-spacing: normal;
+  cursor: pointer;
+}
+.shortDescription-detalle{
+  padding-left: 10rem;
+  width: 500px;
+}
+.shortDescription-detalle-right{
+  padding-left: 10rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  float: right;
+}
+.detalle-right{
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+.foto
+{
+  width: 90%;
 }

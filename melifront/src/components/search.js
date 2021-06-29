@@ -6,27 +6,30 @@ import meliLogo from '../assets/img/logo__small.png'
 const Search = ({marca}) => {
     const [items, setItems] = useState([]);
     const InvokeApiBack = async (par) => {
-        const res = await fetch('http://localhost:1981/api/items?q='+par);
+        const res = await fetch('http://localhost:1981/api/items?q=' + par);
         const data = await res.json();
         console.log(data);
-        let arrayItems=[];
-        let i=0;
+        let arrayItems = [];
+        let i = 0;
         for (let item of data.items) {
-            arrayItems[i++]={id:item.id,
-                picture:item.picture,
-                title:item.title,
-                free_shipping:item.free_shipping,
-                price:item.price.amount,
-                currency:item.price.currency
+            arrayItems[i++] = {
+                id: item.id,
+                picture: item.picture,
+                title: item.title,
+                free_shipping: item.free_shipping,
+                price: item.price.amount,
+                currency: item.price.currency
             }
         }
         setItems(arrayItems)
-        //console.log(arrayItems);
+        console.log()
     }
+
     function miButton(param) {
-        param =document.getElementById('search').value;
+        param = document.getElementById('search').value;
         InvokeApiBack(param);
     }
+
     return (
         <>
             <nav className="nav-bar">
@@ -36,17 +39,17 @@ const Search = ({marca}) => {
                 <div className='RightSide'>
 
                     <input type="search" id="search" name="buscar" placeholder="buscar articulos.."/>
-                    <button className='iconbutt1' onClick={() =>miButton("enviando")}>...</button>
+                    <button className='iconbutt1' onClick={() => miButton("enviando")}>...</button>
                 </div>
             </nav>
             <div className="boxmain">
-            { !items ? 'Loading..':
-                items.map((item, index) =>{
-                    return <Detail key={index} mensaje={item} />
-                })
-            }
+                {!items ? 'Loading..' :
+                    items.map((item, index) => {
+                        return <Detail key={index} mensaje={item}/>
+                    })
+                }
             </div>
-            </>
+        </>
     )
 
 }

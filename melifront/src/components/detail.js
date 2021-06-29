@@ -1,6 +1,7 @@
 import React from 'react';
 import './detail.scss';
-import markNew from '../assets/img/new-24.png'
+import markNew from '../assets/img/new-24.png';
+import {  Link} from "react-router-dom";
 
 function Detail(props) {
 
@@ -17,7 +18,9 @@ function Detail(props) {
 
                 </div>
                 <div className="downCol-right">
-                    <div className="shortDescription item-title"><a href={'http://localhost:1981/api/items/'+props.mensaje.id} >{props.mensaje.id}</a></div>
+                    <div className="shortDescription item-title">
+                        <Link to={"/items/"+props.mensaje.id}>{props.mensaje.id}</Link>
+                    </div>
                 </div>
             </div>
         </div>
